@@ -1,0 +1,52 @@
+div {
+    background: #8f8f8f;
+    padding: 50px;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 20% auto 20%;
+    gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        grid-template-columns: auto;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        grid-template-columns: 20% repeat(4, auto);
+        height: 100vh;
+        margin: 0;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .nav {
+        grid-area: nav;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}
